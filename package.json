@@ -1,0 +1,19 @@
+{
+  "name": "hermes",
+  "version": "1.0.0",
+  "description": "API route manager for the browser",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devSwoop/Hermes.git"
+  },
+  "author": "devSwoop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devSwoop/Hermes/issues"
+  },
+  "homepage": "https://github.com/devSwoop/Hermes#readme"
+}
