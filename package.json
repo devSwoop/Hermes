@@ -1,6 +1,6 @@
 {
-  "name": "hermes",
-  "version": "1.0.0",
+  "name": "@devswoop/hermes",
+  "version": "1.0.4",
   "description": "API route manager for the browser",
   "main": "lib/index.js",
   "scripts": {
