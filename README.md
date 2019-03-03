@@ -2,7 +2,7 @@
 
 Simple, centralized and promised API routes manager for the browser.
 
-```javascript
+```js
 import Hermes from 'Hermes'
 
 Hermes.init({
@@ -29,4 +29,16 @@ Hermes.run('userLogin', {
 .catch(error => {
   // ...
 })
+```
+
+You can also add middlewares like that
+
+```js
+Hermes.listener(data => new Promise((resolve, reject) => {
+  if (data.message === 'You are not authenticated') {
+    reject(new Error('Not logged in'))
+  } else {
+    resolve(data)
+  }
+}))
 ```
