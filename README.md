@@ -31,14 +31,24 @@ Hermes.run('userLogin', {
 })
 ```
 
-You can also add middlewares like that
+You can also add middlewares like that, these will requests without errors
 
 ```js
 Hermes.listener(data => new Promise((resolve, reject) => {
+  // You can edit the data
+  data.date = Date.now()
+  resolve(data)
+}))
+```
+
+You can do the same with errors
+
+```js
+Hermes.catch(data => new Promise((resolve, reject) => {
   if (data.message === 'You are not authenticated') {
-    reject(new Error('Not logged in'))
+    window.location.reload()
   } else {
-    resolve(data)
+    reject(data)
   }
 }))
 ```
